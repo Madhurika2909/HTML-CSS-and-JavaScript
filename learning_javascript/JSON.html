@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>JSON</title>
+</head>
+<body>
+  
+
+  <script>
+    // let product={
+    //   name: 'Tshirt',
+    //   price: 789,
+    //   rating: {
+    //     stars: 4.5,
+    //     noOfReviews: 453,
+    //   },
+    // };
+
+    // console.log(typeof product);
+    // console.log(product);
+    // let str=JSON.stringify(product);
+    // console.log(typeof str);
+    // console.log(str);  //JSON
+
+    // let newProduct= JSON.parse(str);
+    // console.log(typeof newProduct);
+    // console.log(newProduct);
+    //Javascript object is bydefault a JSON object or else we would have needed to convert the object first in JSON and then only we could have used stringify() method
+ 
+  // localStorage.setItem('Name','KG Coding');
+  // localStorage.setItem('Price','89765');
+
+  // console.log(localStorage.getItem('Name'));  //Prints value saved in the local storage.
+
+    let product={
+      name: 'Tshirt',
+      price: 789,
+      rating: {
+        stars: 4.5,
+        noOfReviews: 453,
+      },
+    };
+
+    // localStorage.setItem('product', JSON.stringify(product));
+    // console.log(localStorage.getItem('product'));
+    // let product2= JSON.parse(localStorage.getItem('product'));  //parse is used to covert string to object
+    // console.log(product2);
+
+    localStorage.removeItem('Price');  //removes item
+    localStorage.clear();
+
+
+
+
+  </script>
+</body>
+</html>

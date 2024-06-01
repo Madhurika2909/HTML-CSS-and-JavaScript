@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+nav a{
+    text-decoration: none;
+}
+
+header{
+    background-color: lemonchiffon;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    height: 30px;
+    padding-top: 10px;
+}
+
+img{
+    height: 100px;
+}
+
+#image_container{
+    border: 2px solid black;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#box_container{
+    border: 2px solid black;
+    display:flex;
+    justify-content: space-around;
+    height: 80px;
+    width: 200px;
+}
+
+
+#box2{
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+
+.box{
+    height: 75px;
+    width: 75px;
+    border: 2px solid red;
+    flex-shrink: 0;
+}
+
+/* By default flex-shrink: 1; for box, so we need it to be 0 so that flex-shrink of box2 can override and shrink box2*/
+
+#media_box{
+    height: 50px;
+    width: 50px;
+    background-color: rgb(167, 234, 234);
+    border: 2px solid black;
+}
+
+@media screen and (min-width: 400px) {
+    #media_box{
+        background-color: blue;
+    }  
+}
+
+@media screen and (min-width: 300px) and (max-width: 400px) {
+    #media_box{
+        background-color: red;
+    }  
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Practise exercise Set 4</title>
+</head>
+<body>
+  
+
+
+ <script>
+  let myntraProduct={
+    size:'S',
+    name: 'Jeans',
+    fit: 'Slim Fit',
+    'delivery-time': 'Same day delivey',
+  };
+
+  // let copyProduct=myntraProduct;
+  // console.log(myntraProduct);
+  // copyProduct.size='L';
+  // console.log(myntraProduct);
+  // copyProduct.fit='Regular Fit';
+  // console.log(myntraProduct);
+
+  console.log(myntraProduct['delivery-time']);
+  let obj={
+    message: 'Good Job',
+    status: 'Complete',
+  };
+  let {message, status}=obj;
+  console.log(message);
+  console.log(status);
+
+  let Product2={
+    size:'M',
+    name: 'Jeans',
+    fit: 'Slim Fit',
+    'delivery-time': 'Same day delivey',
+  };
+  
+  let Product3={
+    size:'S',
+    name: 'Jeans',
+    fit: 'Slim Fit',
+    'delivery-time': 'Same day delivey',
+  };
+  function isIdenticalProduct(product1,product2){
+    if(typeof product1 !== 'object' || typeof product2 !== 'object'){
+    console.warn('Parameter passed was not an object');
+    return false;
+  }
+  if(product1==product2){
+    return true;
+  }
+
+  if(product1.name===product2.name &&
+   product1.size===product2.size && 
+   product1.fit=== product2.fit){
+    return true;
+   }
+   else{
+    return false;
+   }
+}
+console.log(isIdenticalProduct(myntraProduct,''));
+console.log(isIdenticalProduct(myntraProduct,myntraProduct));
+console.log(isIdenticalProduct(myntraProduct,Product2));
+console.log(isIdenticalProduct(Product2,Product3));
+
+
+ </script> 
+</body>
+</html>
